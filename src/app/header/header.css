@@ -1,0 +1,129 @@
+.custom-navbar {
+  background-color: #121212; /* Preto quase total */
+  padding: 0.85rem 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  color: #e0e0e0 !important;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.navbar-brand i {
+  font-size: 2rem;
+  margin-right: 0.6rem;
+  color: #e10600;
+}
+
+.navbar-nav {
+  display: flex !important;
+  gap: 2.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #e0e0e0 !important;
+  border-radius: 0.4rem;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: inset 0 0 0 0 transparent;
+}
+
+.nav-link i {
+  font-size: 1.4rem;
+  color: #e0e0e0;
+  transition: color 0.25s ease;
+}
+
+/* Hover - fundo vermelho com texto branco e sombra */
+.nav-link:hover {
+  background-color: #e10600;
+  color: #fff !important;
+  box-shadow: 0 0 8px #e10600;
+}
+
+.nav-link:hover i {
+  color: #fff;
+}
+
+/* Link ativo - fundo vermelho forte, sombra e fonte em negrito */
+.nav-link.active {
+  background-color: #d40000;
+  color: #fff !important;
+  font-weight: 700;
+  border-color: #d40000;
+  box-shadow: 0 0 15px #d40000;
+}
+
+/* Ícone ativo mantém cor branca */
+.nav-link.active i {
+  color: #fff;
+}
+
+/* Foco acessível */
+.nav-link:focus-visible {
+  outline: 3px solid #e10600;
+  outline-offset: 3px;
+}
+
+/* Botão hamburguer estilizado */
+.navbar-toggler {
+  border: none;
+  filter: invert(1);
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  filter: invert(0.8);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Espaçamento no menu colapsado (mobile) */
+.collapse.navbar-collapse {
+  margin-top: 0.6rem;
+}
+
+/* Botão Login destacado (call to action) */
+.btn-login {
+  background-color: #e10600;
+  color: white !important;
+  font-weight: 700;
+  padding: 0.45rem 1.25rem;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(225, 6, 0, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-login:hover {
+  background-color: #b80000;
+  box-shadow: 0 6px 20px rgba(184, 0, 0, 0.8);
+  color: white !important;
+  text-decoration: none;
+}

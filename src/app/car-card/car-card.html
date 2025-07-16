@@ -1,0 +1,8 @@
+<div class="carro-card">
+  <img [src]="imagem" alt="{{ modelo }}" class="carro-img" />
+  <div class="carro-info">
+    <h2>{{ marca }} {{ modelo }}</h2>
+    <p><strong>Ano:</strong> {{ ano }}</p>
+    <p><strong>Preço:</strong> R$ {{ preco | number:'1.2-2' }}</p>
+  </div>
+</div>

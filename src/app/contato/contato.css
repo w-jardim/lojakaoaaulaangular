@@ -1,0 +1,67 @@
+.contato-bg {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.form-container {
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid #e10600;
+  backdrop-filter: blur(8px);
+  border-radius: 1.2rem;
+  padding: 3rem 2rem;
+  max-width: 600px;
+  width: 100%;
+  color: #f5f5f5;
+  box-shadow: 0 0 20px rgba(225, 6, 0, 0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1.5px solid #444;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #e10600;
+  box-shadow: 0 0 10px #e10600;
+  background-color: #2a2a2a;
+}
+
+.btn-submit {
+  background-color: #e10600;
+  border: none;
+  color: #fff;
+  padding: 0.9rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px #e10600;
+}
+
+.btn-submit:hover {
+  background-color: #b80000;
+  box-shadow: 0 0 15px #ff0000;
+}

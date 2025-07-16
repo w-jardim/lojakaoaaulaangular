@@ -1,0 +1,63 @@
+<div class="contato-bg">
+  <div class="form-container">
+    <h2 class="title text-danger text-center mb-4">
+      <i class="bi bi-envelope-paper-heart-fill me-2"></i> Entre em Contato
+    </h2>
+
+    <form (ngSubmit)="enviar(f)" #f="ngForm" novalidate>
+      <div class="form-group mb-4">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          class="form-control"
+          required
+          [(ngModel)]="nome"
+          #nomeInput="ngModel"
+        />
+        <div *ngIf="nomeInput.invalid && nomeInput.touched" class="text-danger mt-1">
+          Nome é obrigatório.
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+          required
+          email
+          [(ngModel)]="email"
+          #emailInput="ngModel"
+        />
+        <div *ngIf="emailInput.invalid && emailInput.touched" class="text-danger mt-1">
+          <span *ngIf="emailInput.errors?.['required']">Email é obrigatório.</span>
+          <span *ngIf="emailInput.errors?.['email']">Email inválido.</span>
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="mensagem">Mensagem</label>
+        <textarea
+          id="mensagem"
+          name="mensagem"
+          class="form-control"
+          rows="5"
+          required
+          [(ngModel)]="mensagem"
+          #msgInput="ngModel"
+        ></textarea>
+        <div *ngIf="msgInput.invalid && msgInput.touched" class="text-danger mt-1">
+          Mensagem é obrigatória.
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit w-100" [disabled]="enviado || f.invalid">
+        <i class="bi bi-send-fill me-2"></i> {{ enviado ? 'Enviando...' : 'Enviar Mensagem' }}
+      </button>
+    </form>
+  </div>
+</div>

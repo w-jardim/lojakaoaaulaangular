@@ -1,0 +1,12 @@
+/* Exemplo simples para garantir que o conteúdo não fique colado no header/footer */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+router-outlet ~ * {
+  flex-grow: 1;
+}
+
+/* Se quiser, adicione padding/margin para o conteúdo */

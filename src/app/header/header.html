@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+  <div class="container-fluid px-4">
+    <!-- Logo / Marca -->
+    <a class="navbar-brand text-white fw-bold d-flex align-items-center" routerLink="/">
+      <i class="bi bi-speedometer2 me-2"></i> Loja KAOA
+    </a>
+
+    <!-- Botão hambúrguer (mobile) -->
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      (click)="isCollapsed = !isCollapsed"
+      aria-label="Toggle navigation"
+      [attr.aria-expanded]="!isCollapsed"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu de navegação -->
+    <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav align-items-center gap-4">
+        <li class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <i class="bi bi-house-door"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" routerLink="/sobre" routerLinkActive="active">
+            <i class="bi bi-info-circle"></i> Sobre
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" routerLink="/servicos" routerLinkActive="active">
+            <i class="bi bi-gear"></i> Serviços
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" routerLink="/contato" routerLinkActive="active">
+            <i class="bi bi-envelope"></i> Contato
+          </a>
+        </li>
+
+        <!-- Botão Login destacado -->
+        <li class="nav-item">
+          <a class="btn-login" routerLink="/login">
+            <i class="bi bi-box-arrow-in-right"></i> Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

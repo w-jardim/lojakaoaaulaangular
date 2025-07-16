@@ -1,0 +1,55 @@
+<div class="login-page">
+  <div class="login-card">
+    <h2 class="text-center text-danger fw-bold mb-4">
+      <i class="bi bi-box-arrow-in-right me-2"></i> Login
+    </h2>
+
+    <!-- Mensagem para usuário -->
+    <div *ngIf="message.text" class="alert" [ngClass]="message.type" role="alert">
+      <i [ngClass]="message.icon" class="me-2"></i> {{ message.text }}
+    </div>
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
+      <div class="mb-4">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control form-control-lg"
+          placeholder="seuemail@exemplo.com"
+          required
+          [(ngModel)]="email"
+          #emailInput="ngModel"
+          [class.is-invalid]="emailInput.invalid && emailInput.touched"
+        />
+        <div class="invalid-feedback">Por favor, insira um email válido.</div>
+      </div>
+
+      <div class="mb-4">
+        <label for="password" class="form-label">Senha</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control form-control-lg"
+          placeholder="Sua senha"
+          required
+          minlength="6"
+          [(ngModel)]="password"
+          #passwordInput="ngModel"
+          [class.is-invalid]="passwordInput.invalid && passwordInput.touched"
+        />
+        <div class="invalid-feedback">A senha deve ter no mínimo 6 caracteres.</div>
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-danger btn-lg w-100 fw-semibold"
+        [disabled]="loginForm.invalid"
+      >
+        Entrar
+      </button>
+    </form>
+  </div>
+</div>

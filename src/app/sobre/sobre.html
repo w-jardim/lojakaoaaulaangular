@@ -1,0 +1,39 @@
+<section class="sobre-section container py-5">
+  <h1 class="section-title mb-4 text-center text-danger">Sobre a {{ empresaNome }}</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="sobre-box p-4 rounded mb-4">
+        <p class="sobre-text">
+          {{ descricao }}
+        </p>
+      </div>
+
+      <div class="missao-visao-valores row gy-4">
+        <div class="col-md-4">
+          <div class="sobre-card h-100 p-3 border-start border-danger border-4 rounded">
+            <h4 class="text-danger mb-2"><i class="bi bi-bullseye me-2"></i>Missão</h4>
+            <p>{{ missao }}</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="sobre-card h-100 p-3 border-start border-danger border-4 rounded">
+            <h4 class="text-danger mb-2"><i class="bi bi-eye-fill me-2"></i>Visão</h4>
+            <p>{{ visao }}</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="sobre-card h-100 p-3 border-start border-danger border-4 rounded">
+            <h4 class="text-danger mb-2"><i class="bi bi-heart-fill me-2"></i>Valores</h4>
+            <ul class="ps-3 mb-0">
+              <li *ngFor="let valor of valores">{{ valor }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

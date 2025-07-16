@@ -1,0 +1,37 @@
+.services-section {
+  background-color: #f8f8f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fff;
+  border: 2px solid #dc3545; /* vermelho */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-icon {
+  font-size: 3rem;
+}
+
+.service-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  color: #444;
+}

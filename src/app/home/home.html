@@ -1,0 +1,12 @@
+<h2 class="titulo">🚗 Carros à Venda - Loja Kaoa</h2>
+
+<div #carrossel class="carrossel" tabindex="0" aria-label="Carrossel de carros">
+  <app-car-card
+    *ngFor="let carro of carros"
+    [imagem]="carro.imagem"
+    [marca]="carro.marca"
+    [modelo]="carro.modelo"
+    [ano]="carro.ano"
+    [preco]="carro.preco"
+  ></app-car-card>
+</div>
